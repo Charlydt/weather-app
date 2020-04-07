@@ -11,7 +11,7 @@ form.addEventListener("submit", (e) => {
 
   const city = input.value;
 
-  fetch(`http://localhost:3000/weather?address=${city}`).then((response) => {
+  fetch(`/weather?address=${city}`).then((response) => {
     response.json().then((data) => {
       if (data.Message) {
         p1.textContent = data.Message;
